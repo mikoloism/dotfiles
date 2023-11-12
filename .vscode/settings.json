@@ -1,0 +1,12 @@
+{
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "editor.defaultFormatter": "ms-python.autopep8",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "autopep8.args": [
+    "--indent-size=4",
+    "--ignore=E226,E302,E41",
+  ]
+}
