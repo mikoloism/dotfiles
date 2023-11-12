@@ -8,5 +8,14 @@
   "autopep8.args": [
     "--indent-size=4",
     "--ignore=E226,E302,E41",
-  ]
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/__pycache__": true
+  }
 }
