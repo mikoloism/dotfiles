@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-
-import json, subprocess
+import json
+import subprocess
 import click
 from rich.console import Console
 from rich.status import Status
@@ -16,14 +16,17 @@ class Installer():
         self.dependencies = dependencies
         self.dependency = self.dependencies[0]
         self.is_verbose = False
-    
-    def set_verbose(self, verbose = False):
+
+    def set_verbose(self, verbose=False):
         self.is_verbose = verbose
 
-    def install(self, commands, should_open_terminal = False):
+    def install(self, commands, should_open_terminal=False):
         if type(commands) is not list and type(commands) is not str:
-            raise Exception("<Installer.install(commands)>\n Accepted: List or Str \n Typeof: " + str(type(commands)))
-        
+            raise Exception(
+                "<Installer.install(commands)>\n Accepted: List or Str \n Typeof: " +
+                str(type(commands))
+            )
+
         if type(commands) is str:
             status.start()
             terminal = 'gnome-terminal --'
@@ -33,12 +36,14 @@ class Installer():
             #     output = subprocess.run([command], shell=True, capture_output=True, encoding='UTF-8')
             # TODO: options[3]
             process = subprocess.Popen(
-                [commands] if should_open_terminal == False else [terminal, commands],
+                [commands] if should_open_terminal == False else [
+                    terminal, commands
+                ],
                 text=True, shell=True,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE)
             output, errors = process.communicate()
-            
+
             if len(errors) > 0:
                 for line in errors.splitlines():
                     console.print(f'    | [ERROR] {line}')
@@ -62,7 +67,9 @@ class Installer():
                 self.install(command)
 
         else:
-            raise Exception("Typeof <Installer.install(commands)> Not Accepted!")
+            raise Exception(
+                "Typeof <Installer.install(commands)> Not Accepted!"
+            )
 def install(dependencies, is_verbose=False):
     installer = Installer(dependencies)
     installer.set_verbose(is_verbose)
@@ -78,8 +85,10 @@ def install(dependencies, is_verbose=False):
 class SelectionsFilter():
     def __init__(self):
         pass
+
     def is_selected(self, dependency):
         return dependency['name'] in self.selections
+
     def filter(self, dependencies, selections):
         self.selections = selections
         return list(filter(self.is_selected, dependencies))
@@ -96,7 +105,7 @@ def to_choices(deps):
 @click.command()
 @click.option("--depsfile",
               help="path of dependencies as json file")
-              # default="dependencies.json", show_default=True)
+# default="dependencies.json", show_default=True)
 @click.option("--verbose",
               help="print each line of <stdout>",
               default=False)
@@ -111,13 +120,17 @@ def main(depsfile, verbose):
     choices = to_choices(dependencies)
     console.print("Choice Each Essential Dependencies:")
     default_selections = [t for t in range(len(dependencies))]
-    selections_choice = select_multiple(options=choices, ticked_indices=default_selections)
+    selections_choice = select_multiple(
+        options=choices,
+        ticked_indices=default_selections
+    )
 
     # filter selections
     selections_dependency = filter_selections(dependencies, selections_choice)
 
     # run installation
     install(selections_dependency, verbose)
+
 
 if __name__ == '__main__':
     main()
