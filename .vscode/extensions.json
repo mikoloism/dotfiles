@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "ms-python.autopep8",
+    "ms-python.vscode-pylance",
+    "ms-python.python",
+    "donjayamanne.python-environment-manager",
+    "kevinrose.vsc-python-indent",
+    "mgesbert.python-path",
+    "ms-vscode.makefile-tools",
+    "rogalmic.bash-debug",
+    "mads-hartmann.bash-ide-vscode",
+    "editorconfig.editorconfig"
+  ]
+}
