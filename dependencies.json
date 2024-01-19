@@ -1,0 +1,121 @@
+[
+    {
+        "name": "Net Tools",
+        "cmd": ["sudo apt-get install net-tools"]
+    },
+    {
+        "name": "Curl",
+        "cmd": ["sudo apt-get install curl"]
+    },
+    {
+        "name": "Python Stuff",
+        "cmd": [
+            {
+                "name": "Install PIP3",
+                "cmd": ["sudo apt-get install python-pip3"]
+            },
+            {
+                "name": "Install VENV",
+                "cmd": ["sudo apt-get install python3-venv"]
+            },
+            {
+                "name": "Install Tkinter",
+                "cmd": ["sudo apt-get install python3-tk"]
+            }
+        ]
+    },
+    {
+        "name": "NeoVim",
+        "cmd": ["sudo apt-get install neovim"]
+    },
+    {
+        "name": "Ranger File Manager",
+        "cmd": ["sudo apt-get install ranger"]
+    },
+    {
+        "name": "Node.js Stuff",
+        "cmd": [
+            {
+                "name": "Install Volta",
+                "open_new": true,
+                "cmd": [
+                    "curl https://get.volta.sh | bash",
+                    "volta setup"
+                ]
+            },
+            {
+                "name": "Install Node.js",
+                "cmd": ["volta install node"]
+            },
+            {
+                "name": "Install NPM",
+                "cmd": ["volta install npm"]
+            },
+            {
+                "name": "Install Yarn",
+                "cmd": ["volta install yarn"]
+            },
+            {
+                "name": "Install PNPM",
+                "cmd": [
+                    "volta install pnpm",
+                    "pnpm setup"
+                ]
+            },
+            {
+                "name": "Install npm:typescript",
+                "cmd": ["npm install --global typescript"]
+            },
+            {
+                "name": "Install npm:zx",
+                "cmd": ["npm install --global zx"]
+            }
+        ]
+    },
+    {
+        "name": "Deno",
+        "cmd": [
+            {
+                "name": "Download",
+                "cmd": ["curl -fsSL https://deno.land/install.sh | sh"]
+            },
+            {
+                "name": "Configure to $PATH",
+                "cmd": [
+                    "echo '# deno'                                          >> \"$HOME/.bashrc\"",
+                    "echo 'export DENO_INSTALL=\"$HOME/.deno\"'             >> \"$HOME/.bashrc\"",
+                    "echo 'case \":$PATH:\" in'                             >> \"$HOME/.bashrc\"",
+                    "echo '  *\":$DENO_INSTALL:\"*) ;;'                     >> \"$HOME/.bashrc\"",
+                    "echo '  *) export PATH=\"$DENO_INSTALL/bin:$PATH\" ;;' >> \"$HOME/.bashrc\"",
+                    "echo 'esac'                                            >> \"$HOME/.bashrc\"",
+                    "echo '# deno end'                                      >> \"$HOME/.bashrc\""
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Microsoft VSCode",
+        "cmd": ["sudo snap install --classic code"]
+    },
+    {
+        "name": "Brave Browser",
+        "cmd": [
+            {
+                "name": "Sign GPG",
+                "cmd": ["sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg"]
+            },
+            {
+                "name": "Add to Repository",
+                "cmd": ["echo \"deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main\"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list"]
+            },
+            {
+                "name": "Update Repository",
+                "cmd": ["sudo apt-get update"]
+            },
+            {
+                "name": "Install",
+                "cmd": ["sudo apt-get install brave-browser"]
+            }
+        ]
+    }
+]
