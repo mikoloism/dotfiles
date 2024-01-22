@@ -1,0 +1,113 @@
+{
+  "GitHub": [
+    {
+      "action": "prompt",
+      "name": "username",
+      "message": "What is <username or email>: "
+    },
+    {
+      "action": "prompt",
+      "name": "password",
+      "message": "What is <password>: ",
+      "secure": true
+    },
+    {
+      "action": "open:url",
+      "url": "https://github.com/login",
+      "steps": [
+        {
+          "action": "click:element",
+          "query": "#login_field"
+        },
+        {
+          "action": "typewrite:element",
+          "query": "#login_field",
+          "text": "{username}"
+        },
+        {
+          "action": "typewrite:element",
+          "query": "#password",
+          "text": "{password}"
+        },
+        {
+          "action": "click:element",
+          "query": "[value=\"Sign in\"]"
+        }
+      ]
+    }
+  ],
+  "Google": [
+    {
+      "action": "prompt",
+      "name": "gmail",
+      "message": "Enter <Email> or <Phone>: "
+    },
+    {
+      "action": "prompt",
+      "name": "password",
+      "message": "Enter your <password>: "
+    },
+    {
+      "action": "open:url",
+      "url": "https://google.com",
+      "steps": [
+        {
+          "action": "click:element",
+          "query": "[aria-label=\"Sign in\"]"
+        },
+        {
+          "action": "wait",
+          "duration": 5
+        },
+        {
+          "action": "click:element",
+          "query": "[id=\"identifierId\"]"
+        },
+        {
+          "action": "typewrite:element",
+          "text": "{gmail}"
+        },
+        {
+          "action": "click:element",
+          "query": "[id=\"identifierNext\"]"
+        },
+        {
+          "action": "wait",
+          "duration": 5
+        },
+        {
+          "action": "typewrite:element",
+          "query": "[aria-label=\"Enter your password\"]",
+          "text": "{password}"
+        },
+        {
+          "action": "click:element",
+          "query": "[id=\"passwordNext\"]"
+        }
+      ]
+    }
+  ],
+  "Infinity New Tab (Pro)": [
+    {
+      "action": "open:url",
+      "url": "https://chromewebstore.google.com/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh",
+      "steps": [
+        {
+          "action": "click:element",
+          "query": "Add to Brave"
+        },
+        {
+          "action": "wait",
+          "duration": 5
+        },
+        {
+          "action": "click:position",
+          "position": {
+            "x": 806,
+            "y": 321
+          }
+        }
+      ]
+    }
+  ]
+}
