@@ -10,6 +10,7 @@ deactive:
 	deactivate
 install:
 	pip3 install rich textual beaupy click pyautogui
+	sudo apt-get install python3-tk python3-dev
 run:
 	python3 main.py
 help:
