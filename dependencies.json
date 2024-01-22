@@ -12,6 +12,17 @@
     ]
   },
   {
+    "name": "Fonts",
+    "cmd": [
+      {
+        "name": "Fira Code",
+        "cmd": [
+          "sudo apt install fonts-firacode"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Python Stuff",
     "cmd": [
       {
@@ -44,6 +55,71 @@
     "name": "Ranger File Manager",
     "cmd": [
       "sudo apt-get install ranger"
+    ]
+  },
+  {
+    "name": "Vercel Hyper Terminal (hyper.is)",
+    "cmd": [
+      {
+        "name": "Download",
+        "cmd": [
+          "curl -fsSL --output \"hyper_installable.deb\" \"https://releases.hyper.is/download/deb\""
+        ]
+      },
+      {
+        "name": "Unpack",
+        "cmd": [
+          "sudo dpkg -i \"hyper_installable.deb\""
+        ]
+      },
+      {
+        "name": "Cleanup",
+        "cmd": [
+          "rm hyper_installable.deb"
+        ]
+      },
+      {
+        "name": "Setup to Default",
+        "cmd": [
+          "sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /  usr/local/bin/hyper 1",
+          "sudo update-alternatives --config x-terminal-emulator"
+        ]
+      },
+      {
+        "name": "Plugins And Themes",
+        "cmd": [
+          {
+            "name": "hyper-aura-theme (theme)",
+            "cmd": [
+              "hyper i hyper-aura-theme"
+            ]
+          },
+          {
+            "name": "hyper-tabs-enhanced",
+            "cmd": [
+              "hyper i hyper-tabs-enhanced"
+            ]
+          },
+          {
+            "name": "hyper-mac-controls",
+            "cmd": [
+              "hyper i hyper-mac-controls"
+            ]
+          },
+          {
+            "name": "hyperpower",
+            "cmd": [
+              "hyper i hyperpower"
+            ]
+          },
+          {
+            "name": "hyper-letters",
+            "cmd": [
+              "hyper i hyper-letters"
+            ]
+          }
+        ]
+      }
     ]
   },
   {
