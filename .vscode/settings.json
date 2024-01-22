@@ -6,7 +6,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "python.analysis.autoImportCompletions": true,
-  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.typeCheckingMode": "off",
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8",
     "diffEditor.ignoreTrimWhitespace": false,
