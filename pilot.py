@@ -42,8 +42,7 @@ def action_prompt(step: dict):
         message,
         secure=is_secure
     )
-
-    stores = {[name]: result}
+    stores[name] = answer
 
 def filter_selections(steps, selections):
     filtered = {}
