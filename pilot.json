@@ -2,12 +2,12 @@
   "GitHub": [
     {
       "action": "prompt",
-      "name": "username",
+      "name": "gh_username",
       "message": "What is <username or email>: "
     },
     {
       "action": "prompt",
-      "name": "password",
+      "name": "gh_password",
       "message": "What is <password>: ",
       "secure": true
     },
@@ -22,12 +22,12 @@
         {
           "action": "typewrite:element",
           "query": "#login_field",
-          "text": "{username}"
+          "text": "{gh_username}"
         },
         {
           "action": "typewrite:element",
           "query": "#password",
-          "text": "{password}"
+          "text": "{gh_password}"
         },
         {
           "action": "click:element",
@@ -44,7 +44,7 @@
     },
     {
       "action": "prompt",
-      "name": "password",
+      "name": "gmail_password",
       "message": "Enter your <password>: "
     },
     {
@@ -78,7 +78,7 @@
         {
           "action": "typewrite:element",
           "query": "[aria-label=\"Enter your password\"]",
-          "text": "{password}"
+          "text": "{gmail_password}"
         },
         {
           "action": "click:element",
