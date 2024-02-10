@@ -9,8 +9,8 @@ active:
 deactive:
 	deactivate
 install:
-	pip3 install rich textual beaupy click pyautogui
-	sudo apt-get install python3-tk python3-dev
+	pip3 install rich textual beaupy click pyautogui opencv-python selenium
+	sudo apt-get install python3-tk python3-dev gnome-screenshot
 run:
 	python3 main.py
 help:
