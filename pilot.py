@@ -31,14 +31,23 @@ def parse_action(step):
     action = step['action']
 
     if action == 'prompt':
-        action_prompt(step)
+        act_prompt(step)
     console.log(f'{action}')
 
-def action_prompt(step: dict):
+def act_open_url(step: dict):
+    url = step['url']
+    # open url here
+
+    pilot.typewrite(url)
+    substeps = step['steps']
+    for substep in substeps:
+        parse_action(substep)
+
+def act_prompt(step: dict):
     is_secure = step.get('secure') or False
     message = step['message']
     name = step['name']
-    result = prompt(
+    answer = prompt(
         message,
         secure=is_secure
     )
