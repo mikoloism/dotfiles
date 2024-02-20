@@ -89,7 +89,7 @@ plugins=(
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-source "$HOME/.config/shell/themes.zsh"
+source "$HOME/.config/shell/ohz-init-theme.zsh"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
