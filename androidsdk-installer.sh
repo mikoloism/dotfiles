@@ -3,7 +3,7 @@
 
 configure_path() {
   echo "# java (jdk, jre, jvm)"                                                                          >>"$HOME/.bashrc"
-  echo "JAVA_HOME=$(dirname $( readlink -f $(which java) ))"                                             >>"$HOME/.bashrc"
+  JAVA_HOME=$(dirname $( readlink -f $(which java) ))
   echo "export JAVA_HOME=\"$(realpath "$JAVA_HOME"/../)\""                                               >>"$HOME/.bashrc"
   echo "export JAVA_PATH=\"/usr/bin/java\""                                                              >>"$HOME/.bashrc"
   echo "export PATH=\"\$PATH:\$JAVA_HOME/bin\""                                                          >>"$HOME/.bashrc"
@@ -59,6 +59,9 @@ echo "  - move to /opt"
 cd "$HOME"
 mv "$HOME/android-sdk" "/opt/android-sdk"
 
+echo "   - install prerequirements (even 32bit)"
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+
 echo "  - setup PATH"
 configure_path
 
@@ -91,6 +94,10 @@ sdkmanager "emulator"
 echo "  - download gradle"
 GRADLE_BIN_URL="https://services.gradle.org/distributions/gradle-8.6-bin.zip"
 wget -O "gradle-bin.zip" "$GRADLE_BIN_URL"
-mkdir "/opt/gradle"
-unzip -d "/opt/gradle" "gradle-bin.zip"
+sudo mkdir "/opt/gradle"
+sudo unzip -d "/opt/gradle" "gradle-bin.zip"
 
+
+### Android Studio (GUI)
+# ln -sf /opt/android-studio /usr/local/android-studio
+###
