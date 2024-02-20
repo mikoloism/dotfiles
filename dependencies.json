@@ -23,6 +23,26 @@
     ]
   },
   {
+    "name": "Bottom (top-alt, monitor)",
+    "cmd": [
+      {
+        "name": "Install snap",
+        "cmd": [
+          "sudo snap install bottom"
+        ]
+      },
+      {
+        "name": "Grant Premission",
+        "cmd": [
+          "sudo snap connect bottom:mount-observe",
+          "sudo snap connect bottom:hardware-observe",
+          "sudo snap connect bottom:system-observe",
+          "sudo snap connect bottom:process-control"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Python Stuff",
     "cmd": [
       {
