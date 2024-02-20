@@ -105,6 +105,7 @@ source "$HOME/.config/shell/ohz-init-theme.zsh"
 # ALIASES
 source "$HOME/.config/shell/aliases.sh"
 source "$HOME/.config/shell/functions.sh"
+source "$HOME/.config/shell/str.sh"
 source "$HOME/.config/shell/path.sh"
 
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
