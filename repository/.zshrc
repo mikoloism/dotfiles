@@ -14,7 +14,6 @@ ZSH_THEME="robbyrussell"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=("clean" "jaischeema" "nebirhos" "philips" "terminalparty" "wezm+" "wuffers")
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -127,7 +126,7 @@ alias gover="gvm"
 # golang end
 
 # pnpm
-export PNPM_HOME="~/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PATH:$PNPM_HOME" ;;
@@ -135,18 +134,18 @@ esac
 # pnpm end
 
 # bun
-[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
-export BUN_INSTALL="~/.bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
 export PATH="$PATH:$BUN_INSTALL/bin"
 # bun end
 
 # volta
-export VOLTA_HOME="~/.volta"
+export VOLTA_HOME="$HOME/.volta"
 export PATH="$PATH:$VOLTA_HOME/bin"
 # volta end
 
 # deno
-export DENO_INSTALL="~/.deno"
+export DENO_INSTALL="$HOME/.deno"
 case ":$PATH:" in
   *":$DENO_INSTALL:"*) ;;
   *) export PATH="$PATH:$DENO_INSTALL/bin" ;;
