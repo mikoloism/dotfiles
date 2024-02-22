@@ -106,22 +106,23 @@ source "$HOME/.config/shell/aliases.sh"
 source "$HOME/.config/shell/functions.sh"
 source "$HOME/.config/shell/str.sh"
 source "$HOME/.config/shell/path.sh"
+source "$HOME/.config/shell/pass.sh"
 
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export PATH="$PATH:~/.fzf/bin"
+export PATH="$PATH:$HOME/.fzf/bin"
 
 fpath=(~/.zshrc_configs $fpath)
 autoload -Uz compinit
 compinit -u
 
 # lua (luaver)
-[[ -s "~/.luaver/luaver" ]] && . "~/.luaver/luaver"
+[[ -s "$HOME/.luaver/luaver" ]] && . "$HOME/.luaver/luaver"
 # lua end
 
 # golang (gvm)
-export PATH="$PATH:~/go/bin"
+export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:/usr/local/go/bin"
-[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 alias gover="gvm"
 # golang end
 
@@ -161,7 +162,7 @@ export PATH="$PATH:$JAVA_HOME/bin"
 # android (cmdline-tools, platform-tools, tools)
 export ANDROID_HOME="/opt/android-sdk"
 export ANDROID_SDK_ROOT="/opt/android-sdk"
-export ANDROID_SDK_HOME="~/.android"
+export ANDROID_SDK_HOME="$HOME/.android"
 export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$ANDROID_HOME/cmdline-tools/bin"
@@ -178,5 +179,5 @@ export PATH="$PATH:$GRADLE_HOME/bin"
 # cargo end
 
 # shell
-export PATH="~/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 # shell end
