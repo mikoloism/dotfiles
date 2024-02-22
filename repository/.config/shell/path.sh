@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 path-normilize() {
-    local RESULT=$(echo "$1" | sed "s/\$HOME/~/g" | sed -e "s|$HOME|~|g" -e "s|^$HOME|~|")
-    local RESULT=$(echo "${RESULT/#$HOME/~}")
+    local RESULT=$(echo "$1" | sed -e "s|~|$HOME|g")
     echo "$RESULT"
 }
 
