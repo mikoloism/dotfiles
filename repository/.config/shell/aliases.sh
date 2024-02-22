@@ -4,6 +4,7 @@ alias lzg="lazygit"
 alias l="ls -la --group-directories-first --sort=extension"
 alias cp="cp --interactive --verbose"
 alias mv="mv --interactive --verbose"
+alias ln="ln --interactive --verbose --symbolic"
 
 ### `rm` command
 alias rm="rm -i --recursive"
