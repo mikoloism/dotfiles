@@ -7,14 +7,15 @@ alias mv="mv --interactive --verbose"
 alias ln="ln --interactive --verbose --symbolic"
 
 ### `rm` command
-alias rms="rm -i --recursive"
-alias rmv="rm -i --recursive --verbose"
+alias  rm="rmv"
+alias rmv="command rm -i --recursive --verbose"
 alias rmf="rmv --force"
-alias rm="rm -i --recursive --verbose"
+alias rms="command rm -i --recursive"
+alias rmq="command rm -i --recursive"
 ### `rm` end
 
 ### `mkdir` command
 alias mkdir="mkdir --parents --verbose"
-alias mkd="mkdir"
-alias md="mkdir"
+alias  mkd="mkdir"
+alias   md="mkdir"
 ### `mkdir` end
