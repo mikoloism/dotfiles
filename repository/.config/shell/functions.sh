@@ -22,21 +22,25 @@ edit() {
   $EDITOR "$@"
 }
 
-editor() {
-  if [ -z "$1" ]; then
-    echo "eidtor: $EDITOR"
+getedit() {
+  echo "eidtor: $EDITOR"
+  if [ -z "$EDITOR" ]; then
+    return 0
+  else
+    return 1
+  fi
+}
 
-    if [ -z "$EDITOR" ]; then
+setedit() {
+  if [ -z "$1" ]; then
+    return 1
+  else
+    if [ "$2" = '--keep' ]; then
+      echo "export EDITOR=$1" >> "$HOME/.zshrc"
       return 0
     else
-      return 1
-    fi
-    else
-    if [ -z "$2" ]; then
       export EDITOR="$1"
       return 0
-    else
-      echo "export EDITOR=$1" >> "$HOME/.zshrc"
     fi
   fi
 }
