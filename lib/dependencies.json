@@ -17,7 +17,7 @@
       {
         "name": "Fira Code",
         "cmd": [
-          "sudo apt install fonts-firacode"
+          "sudo apt-get install fonts-firacode"
         ]
       }
     ]
@@ -40,6 +40,12 @@
           "sudo snap connect bottom:process-control"
         ]
       }
+    ]
+  },
+  {
+    "name": "EXA (ls-alt)",
+    "cmd": [
+      "sudo apt-get install exa"
     ]
   },
   {
