@@ -126,12 +126,13 @@ export PATH="$PATH:/usr/local/go/bin"
 alias gover="gvm"
 # golang end
 
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$PATH:$VOLTA_HOME/bin"
+# volta end
+
 # pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PATH:$PNPM_HOME" ;;
-esac
+export VOLTA_FEATURE_PNPM=1
 # pnpm end
 
 # bun
@@ -139,11 +140,6 @@ esac
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$PATH:$BUN_INSTALL/bin"
 # bun end
-
-# volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$PATH:$VOLTA_HOME/bin"
-# volta end
 
 # deno
 export DENO_INSTALL="$HOME/.deno"
