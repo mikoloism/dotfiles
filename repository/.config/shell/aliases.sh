@@ -8,18 +8,15 @@ alias ln="ln --interactive --verbose --symbolic"
 
 ### `ls` and `exa` (list directory content)
 # [LEGACY] alias l='ls -la --group-directories-first --sort=version'
-alias exa='command exa --colour="auto" --colour-scale --group-directories-first --binary --header --sort="name" --no-time'
+alias exa='command exa --colour="auto" --colour-scale --group-directories-first --binary --header --sort="name" --no-time --level=1'
 alias ls='exa'
 alias la='exa --all'
-alias l='la'
+alias l='la --long'
 alias lc='la --classify'
-alias lt="la --level=1 --tree"
-alias ltc="la --level=1 --tree --classify"
-alias lg="ls --group"
-alias lgc="ls --group --classify"
-alias lga="la --group"
+alias lt="la --tree --long"
 alias ll="ls --oneline"
 alias lla="ll --all"
+alias llt="lla --tree"
 alias ld='ls --only-dirs'
 alias lda='ld --all'
 alias lld='ld --all'
