@@ -49,6 +49,29 @@
     ]
   },
   {
+    "name": "TTY Clock",
+    "cmd": [
+      "sudo apt-get install tty-clock"
+    ]
+  },
+  {
+    "name": "Bat (cat-alt)",
+    "cmd": [
+      {
+        "name": "Install",
+        "cmd": [
+          "sudo apt-get install bat"
+        ]
+      },
+      {
+        "name": "Aliases",
+        "cmd": [
+          "echo 'not available'"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Python Stuff",
     "cmd": [
       {
