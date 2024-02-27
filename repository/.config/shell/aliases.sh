@@ -46,3 +46,8 @@ alias mkdir="mkdir --parents --verbose"
 alias mkd="mkdir"
 alias md="mkdir"
 
+# -------------------------------- #
+# `batcat` command
+# -------------------------------- #
+
+alias bat='command batcat --style="plain,numbers,changes" --pager="less" --paging="always" --tabs="4" --color="always" --theme="Visual Studio Dark+"'
