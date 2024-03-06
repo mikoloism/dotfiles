@@ -18,7 +18,7 @@ plugins=(
     git git-flow github gh
     volta node npm yarn deno bun
     python autopep8 pep8 pyenv pip pipenv virtualenv
-    ubuntu snap man ssh-agent gnu-utils emoji themes
+    ubuntu snap man colored-man-pages ssh-agent gnu-utils emoji themes
     ionic react-native sdk adb gradle
     grunt gulp
     vscode golang rust
@@ -35,6 +35,8 @@ source "$HOME/.config/shell/functions.sh"
 source "$HOME/.config/shell/str.sh"
 source "$HOME/.config/shell/path.sh"
 source "$HOME/.config/shell/pass.sh"
+
+
 
 # -------------------------------- #
 # PATH Environment Variables
