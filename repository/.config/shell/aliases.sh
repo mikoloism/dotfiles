@@ -51,3 +51,5 @@ alias md="mkdir"
 # -------------------------------- #
 
 alias bat='command batcat --style="plain,numbers,changes" --pager="less" --paging="always" --tabs="4" --color="always" --theme="Visual Studio Dark+"'
+alias bottom='command bottom --tree --group --celsius --mem_as_value --battery --dot_marker --left_legend --hide_time'
+alias top='command bottom --tree --group --celsius --mem_as_value --battery --dot_marker --left_legend --hide_time --basic'
