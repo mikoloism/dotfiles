@@ -1,21 +1,27 @@
 #!/usr/bin/env bash
 
 shagen() {
-	passphrase="$1"
-	if [[ "$passphrase" == "" ]]; then
-		echo -n "passphrase      => "
-		read -s  passphrase
-		echo ""
-	fi
+  passphrase="$1"
+  if [[ "$passphrase" == "" ]]; then
+    echo -n "passphrase      => "
+    read -s passphrase
+    echo ""
+  fi
 
-	algorithm="$2"
-	if [[ "$algorithm" == "" ]]; then
-		echo -n "algorithm [256] => "
-		read     algorithm
-		algorithm=${algorithm:-256}
-	fi;
+  algorithm="$2"
+  if [[ "$algorithm" == "" ]]; then
+    echo -n "algorithm [256] => "
+    read algorithm
+    algorithm=${algorithm:-256}
+  fi
 
-	echo "$(echo -n "$passphrase" | shasum -a "$algorithm" --text)"
+  local output="$(echo -n "$passphrase" | shasum -a "$algorithm" --text | sed -r 's|\s+\-\s*||g')"
+
+  if command -v 'clipboard' &>/dev/null; then
+    echo -n "$output" | clipboard
+  fi
+
+  echo "$output"
 }
 
 edit() {
@@ -36,7 +42,7 @@ setedit() {
     return 1
   else
     if [ "$2" = '--keep' ]; then
-      echo "export EDITOR=$1" >> "$HOME/.zshrc"
+      echo "export EDITOR=$1" >>"$HOME/.zshrc"
       return 0
     else
       export EDITOR="$1"
