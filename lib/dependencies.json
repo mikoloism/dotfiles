@@ -37,7 +37,7 @@
           "sudo snap connect bottom:mount-observe",
           "sudo snap connect bottom:hardware-observe",
           "sudo snap connect bottom:system-observe",
-          "sudo snap connect bottom:process-control"
+          "echo 'be careful to run <sudo snap connect bottom:process-control>'"
         ]
       }
     ]
@@ -217,6 +217,12 @@
         "name": "Install npm:zx",
         "cmd": [
           "npm install --global zx"
+        ]
+      },
+      {
+        "name": "Install npm:clipboard-cli",
+        "cmd": [
+          "volta install clipboard-cli"
         ]
       }
     ]
