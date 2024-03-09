@@ -3,11 +3,17 @@
 # -------------------------------- #
 
 alias dof='/usr/bin/git --git-dir=$HOME/.dogfile/ --work-tree=$HOME'
-alias ping="ping -w 10 -i 0.250 -c 16 "
 alias lzg="lazygit"
+
+# -------------------------------- #
+# posix commands
+# -------------------------------- #
+# override built-in commands
+
 alias cp="cp --interactive --verbose"
 alias mv="mv --interactive --verbose"
 alias ln="ln --interactive --verbose --symbolic"
+alias ping="ping -w 10 -i 0.250 -c 16 "
 
 # -------------------------------- #
 # `exa` command
@@ -51,8 +57,20 @@ alias md="mkdir"
 # -------------------------------- #
 
 alias bat='command batcat --style="plain,numbers,changes" --pager="less" --paging="always" --tabs="4" --color="always" --theme="Visual Studio Dark+"'
+
+# -------------------------------- #
+# `bottom` command
+# -------------------------------- #
+# system monitor
+
+alias btm='command bottom'
+alias top='command bottom --tree --group --celsius --mem_as_value --enable_cache_memory --enable_gpu_memory --network_use_binary_prefix --network_use_bytes --battery --dot_marker --show_table_scroll_position --left_legend --hide_time --basic'
 alias bottom='command bottom --tree --group --celsius --mem_as_value --enable_cache_memory --enable_gpu_memory --network_use_binary_prefix --network_use_bytes --battery --dot_marker --show_table_scroll_position --left_legend --hide_time'
-alias top='command bottom --tree --group --celsius --mem_as_value --enable_cache_memroy --enable_gpu_memory --network_use_binary_prefix --network_use_bytes --battery --dot_marker --show_table_scroll_position --left_legend --hide_time --basic'
+
+# -------------------------------- #
+# `tty-clock` command
+# -------------------------------- #
+
 alias clock='command tty-clock -bc -C7'
 alias fullclock='command tty-clock -sBbc -C7'
 alias screensaverclock='command tty-clock -Sra 100000000 -d 0'
