@@ -29,7 +29,7 @@ plugins=(
 # Configs and Extensions
 # -------------------------------- #
 
-source "$HOME/.config/shell/ohz-init-theme.zsh"
+source "$HOME/.config/shell/oh-my-zsh.zsh"
 source "$HOME/.config/shell/aliases.sh"
 source "$HOME/.config/shell/functions.sh"
 source "$HOME/.config/shell/str.sh"
