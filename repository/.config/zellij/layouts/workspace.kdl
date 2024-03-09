@@ -1,0 +1,29 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+    children
+    // pane size=2 borderless=true {
+    //  plugin location="zellij:status-bar"
+    // }
+  }
+  tab name="Main" split_direction="Vertical" {
+    pane split_direction="Vertical" {
+      pane name="home"
+      pane split_direction="Horizontal" size="45%" {
+        pane name="clock" size="25%"
+        pane name="monitor"
+      }
+    }
+  }
+  tab name="Workspace" split_direction="Vertical" {
+    pane split_direction="Vertical" {
+      pane split_direction="Horizontal" {
+        pane name="workspace"
+        pane name="terminal" size="30%"
+      }
+      pane name="sidebar" size="40%"
+    }
+  }
+}
