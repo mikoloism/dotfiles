@@ -72,6 +72,12 @@
     ]
   },
   {
+    "name": "neofetch",
+    "cmd": [
+      "sudo apt-get install neofetch"
+    ]
+  },
+  {
     "name": "Python Stuff",
     "cmd": [
       {
