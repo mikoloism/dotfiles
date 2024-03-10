@@ -101,9 +101,15 @@
     ]
   },
   {
-    "name": "NeoVim",
+    "name": "NeoVim (apt-get)",
     "cmd": [
       "sudo apt-get install neovim"
+    ]
+  },
+  {
+    "name": "NeoVim (snap)",
+    "cmd": [
+      "sudo snap install nvim --classic"
     ]
   },
   {
