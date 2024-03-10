@@ -1,0 +1,5 @@
+if [[ -n $SSH_CONNECTION ]]; then
+  if command -v neofetch &> /dev/null; then
+    neofetch
+  fi
+fi
