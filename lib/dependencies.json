@@ -72,9 +72,27 @@
     ]
   },
   {
-    "name": "neofetch",
+    "name": "neofetch (system fetch)",
     "cmd": [
       "sudo apt-get install neofetch"
+    ]
+  },
+  {
+    "name": "onefetch (git fetch)",
+    "cmd": [
+      {
+        "name": "Install",
+        "cmd": [
+          "sudo snap install onefetch"
+        ]
+      },
+      {
+        "name": "Permissions",
+        "cmd": [
+          "echo 'becareful'",
+          "echo 'snap connect onefetch:removable-media'"
+        ]
+      }
     ]
   },
   {
