@@ -10,8 +10,11 @@ layout {
   }
   tab name="Main" split_direction="Vertical" {
     pane split_direction="Vertical" {
-      pane name="home"
-      pane split_direction="Horizontal" size="45%" {
+      pane split_direction="Horizontal" {
+        pane name="info" command="neofetch" size="45%"
+        pane name="home"
+      }
+      pane split_direction="Horizontal" size="32%" {
         pane name="clock" size="25%"
         pane name="monitor"
       }
@@ -23,7 +26,9 @@ layout {
         pane name="workspace"
         pane name="terminal" size="30%"
       }
-      pane name="sidebar" size="40%"
+      pane split_direction="Horizontal" size="15%" {
+        pane name="sidebar"
+      }
     }
   }
 }
