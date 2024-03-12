@@ -1,11 +1,5 @@
 #!/usr/bin/env zsh
 
-# -------------------------------- #
-# VARIABLES
-# -------------------------------- #
-
-export EDITOR='nvim'
-
 ZSH_THEME_RANDOM_CANDIDATES=(
   # "clean"
   # "jaischeema"
