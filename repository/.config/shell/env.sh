@@ -80,3 +80,15 @@ export PATH="$PATH:$GRADLE_HOME/bin"
 # https://rust-lang.org (cargo)
 
 . "$HOME/.cargo/env"
+
+# -------------------------------- #
+# LOCAL VARIABLES
+# -------------------------------- #
+
+EDITOR='nano'
+if command -v 'nvim' &>/dev/null; then
+  EDITOR='nvim'
+fi
+
+DOTFILES="$HOME/dotfiles"
+REPOSITORY="$DOTFILES/repository"
