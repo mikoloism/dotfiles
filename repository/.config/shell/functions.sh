@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+gopo() {
+  cd "$PROJECTS/$1"
+}
+
 shagen() {
 	print_help() {
 		local help_message="\n"
