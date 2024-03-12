@@ -1,24 +1,18 @@
 [
   {
     "name": "Net Tools",
-    "cmd": [
-      "sudo apt-get install net-tools"
-    ]
+    "cmd": ["sudo apt-get install net-tools"]
   },
   {
     "name": "Curl",
-    "cmd": [
-      "sudo apt-get install curl"
-    ]
+    "cmd": ["sudo apt-get install curl"]
   },
   {
     "name": "Fonts",
     "cmd": [
       {
         "name": "Fira Code",
-        "cmd": [
-          "sudo apt-get install fonts-firacode"
-        ]
+        "cmd": ["sudo apt-get install fonts-firacode"]
       }
     ]
   },
@@ -27,9 +21,7 @@
     "cmd": [
       {
         "name": "Install snap",
-        "cmd": [
-          "sudo snap install bottom"
-        ]
+        "cmd": ["sudo snap install bottom"]
       },
       {
         "name": "Grant Premission",
@@ -44,54 +36,39 @@
   },
   {
     "name": "EXA (ls-alt)",
-    "cmd": [
-      "sudo apt-get install exa"
-    ]
+    "cmd": ["sudo apt-get install exa"]
   },
   {
     "name": "TTY Clock",
-    "cmd": [
-      "sudo apt-get install tty-clock"
-    ]
+    "cmd": ["sudo apt-get install tty-clock"]
   },
   {
     "name": "Bat (cat-alt)",
     "cmd": [
       {
         "name": "Install",
-        "cmd": [
-          "sudo apt-get install bat"
-        ]
+        "cmd": ["sudo apt-get install bat"]
       },
       {
         "name": "Aliases",
-        "cmd": [
-          "echo 'not available'"
-        ]
+        "cmd": ["echo 'not available'"]
       }
     ]
   },
   {
     "name": "neofetch (system fetch)",
-    "cmd": [
-      "sudo apt-get install neofetch"
-    ]
+    "cmd": ["sudo apt-get install neofetch"]
   },
   {
     "name": "onefetch (git fetch)",
     "cmd": [
       {
         "name": "Install",
-        "cmd": [
-          "sudo snap install onefetch"
-        ]
+        "cmd": ["sudo snap install onefetch"]
       },
       {
         "name": "Permissions",
-        "cmd": [
-          "echo 'becareful'",
-          "echo 'snap connect onefetch:removable-media'"
-        ]
+        "cmd": ["echo 'becareful'", "echo 'snap connect onefetch:removable-media'"]
       }
     ]
   },
@@ -100,40 +77,38 @@
     "cmd": [
       {
         "name": "Install PIP3",
-        "cmd": [
-          "sudo apt-get install python-pip3"
-        ]
+        "cmd": ["sudo apt-get install python-pip3"]
       },
       {
         "name": "Install VENV",
-        "cmd": [
-          "sudo apt-get install python3-venv"
-        ]
+        "cmd": ["sudo apt-get install python3-venv"]
       },
       {
         "name": "Install Tkinter",
-        "cmd": [
-          "sudo apt-get install python3-tk"
-        ]
+        "cmd": ["sudo apt-get install python3-tk"]
       }
     ]
   },
   {
     "name": "NeoVim (apt-get)",
-    "cmd": [
-      "sudo apt-get install neovim"
-    ]
+    "cmd": ["sudo apt-get install neovim"]
   },
   {
     "name": "NeoVim (snap)",
-    "cmd": [
-      "sudo snap install nvim --classic"
-    ]
+    "cmd": ["sudo snap install nvim --classic"]
   },
   {
     "name": "Ranger File Manager",
+    "cmd": ["sudo apt-get install ranger"]
+  },
+  {
+    "name": "GitHub (cli official)",
     "cmd": [
-      "sudo apt-get install ranger"
+      "sudo mkdir -p -m 755 /etc/apt/keyrings && wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null",
+      "sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg",
+      "echo \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main\" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null",
+      "sudo apt-get update",
+      "sudo apt-get install gh -y"
     ]
   },
   {
@@ -147,15 +122,11 @@
       },
       {
         "name": "Unpack",
-        "cmd": [
-          "sudo dpkg -i \"hyper_installable.deb\""
-        ]
+        "cmd": ["sudo dpkg -i \"hyper_installable.deb\""]
       },
       {
         "name": "Cleanup",
-        "cmd": [
-          "rm hyper_installable.deb"
-        ]
+        "cmd": ["rm hyper_installable.deb"]
       },
       {
         "name": "Setup to Default",
@@ -169,33 +140,23 @@
         "cmd": [
           {
             "name": "hyper-aura-theme (theme)",
-            "cmd": [
-              "hyper i hyper-aura-theme"
-            ]
+            "cmd": ["hyper i hyper-aura-theme"]
           },
           {
             "name": "hyper-tabs-enhanced",
-            "cmd": [
-              "hyper i hyper-tabs-enhanced"
-            ]
+            "cmd": ["hyper i hyper-tabs-enhanced"]
           },
           {
             "name": "hyper-mac-controls",
-            "cmd": [
-              "hyper i hyper-mac-controls"
-            ]
+            "cmd": ["hyper i hyper-mac-controls"]
           },
           {
             "name": "hyperpower",
-            "cmd": [
-              "hyper i hyperpower"
-            ]
+            "cmd": ["hyper i hyperpower"]
           },
           {
             "name": "hyper-letters",
-            "cmd": [
-              "hyper i hyper-letters"
-            ]
+            "cmd": ["hyper i hyper-letters"]
           }
         ]
       }
@@ -207,53 +168,35 @@
       {
         "name": "Install Volta",
         "open_new": true,
-        "cmd": [
-          "curl https://get.volta.sh | bash",
-          "volta setup"
-        ]
+        "cmd": ["curl https://get.volta.sh | bash", "volta setup"]
       },
       {
         "name": "Install Node.js",
-        "cmd": [
-          "volta install node"
-        ]
+        "cmd": ["volta install node"]
       },
       {
         "name": "Install NPM",
-        "cmd": [
-          "volta install npm"
-        ]
+        "cmd": ["volta install npm"]
       },
       {
         "name": "Install Yarn",
-        "cmd": [
-          "volta install yarn"
-        ]
+        "cmd": ["volta install yarn"]
       },
       {
         "name": "Install PNPM",
-        "cmd": [
-          "volta install pnpm",
-          "pnpm setup"
-        ]
+        "cmd": ["volta install pnpm", "pnpm setup"]
       },
       {
         "name": "Install npm:typescript",
-        "cmd": [
-          "npm install --global typescript"
-        ]
+        "cmd": ["npm install --global typescript"]
       },
       {
         "name": "Install npm:zx",
-        "cmd": [
-          "npm install --global zx"
-        ]
+        "cmd": ["npm install --global zx"]
       },
       {
         "name": "Install npm:clipboard-cli",
-        "cmd": [
-          "volta install clipboard-cli"
-        ]
+        "cmd": ["volta install clipboard-cli"]
       }
     ]
   },
@@ -262,9 +205,7 @@
     "cmd": [
       {
         "name": "Download",
-        "cmd": [
-          "curl -fsSL https://deno.land/install.sh | sh"
-        ]
+        "cmd": ["curl -fsSL https://deno.land/install.sh | sh"]
       },
       {
         "name": "Configure to $PATH",
@@ -282,15 +223,11 @@
   },
   {
     "name": "Rustup",
-    "cmd": [
-      "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
-    ]
+    "cmd": ["curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"]
   },
   {
     "name": "Microsoft VSCode",
-    "cmd": [
-      "sudo snap install --classic code"
-    ]
+    "cmd": ["sudo snap install --classic code"]
   },
   {
     "name": "Brave Browser",
@@ -309,15 +246,11 @@
       },
       {
         "name": "Update Repository",
-        "cmd": [
-          "sudo apt-get update"
-        ]
+        "cmd": ["sudo apt-get update"]
       },
       {
         "name": "Install",
-        "cmd": [
-          "sudo apt-get install brave-browser"
-        ]
+        "cmd": ["sudo apt-get install brave-browser"]
       }
     ]
   },
@@ -326,15 +259,11 @@
     "cmd": [
       {
         "name": "Install JDK",
-        "cmd": [
-          "sudo apt-get install default-jdk openjdk-17-jdk"
-        ]
+        "cmd": ["sudo apt-get install default-jdk openjdk-17-jdk"]
       },
       {
         "name": "Install JRE",
-        "cmd": [
-          "sudo apt-get install default-jre"
-        ]
+        "cmd": ["sudo apt-get install default-jre"]
       },
       {
         "name": "Configure to PATH",
@@ -349,9 +278,7 @@
       },
       {
         "name": "Update Alternative",
-        "cmd": [
-          "sudo update-alternatives --config java"
-        ]
+        "cmd": ["sudo update-alternatives --config java"]
       }
     ]
   }
