@@ -57,6 +57,7 @@ alias md="mkdir"
 # -------------------------------- #
 
 alias bat='command batcat --style="plain,numbers,changes" --pager="less" --paging="always" --tabs="4" --color="always" --theme="Visual Studio Dark+"'
+alias cat='command batcat --style="plain" --pager="less" --paging="auto" --tabs="4" --color="auto" --theme="Visual Studio Dark+"'
 
 # -------------------------------- #
 # `bottom` command
