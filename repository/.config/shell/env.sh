@@ -92,3 +92,5 @@ fi
 
 DOTFILES="$HOME/dotfiles"
 REPOSITORY="$DOTFILES/repository"
+
+export XDG_CONFIG_HOME="$HOME/.config"
