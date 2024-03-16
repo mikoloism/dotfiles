@@ -15,6 +15,8 @@ ZSH_THEME="robbyrussell"
 # -------------------------------- #
 
 plugins=(
+    vi-mode vim-interaction zsh-interactive-cd zsh-navigation-tools
+    systemd systemadmin safe-paste colorize
     git git-flow github gh
     volta node npm yarn deno bun
     python autopep8 pep8 pyenv pip pipenv virtualenv
