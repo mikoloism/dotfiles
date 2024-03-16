@@ -75,3 +75,16 @@ alias bottom='command bottom --tree --group --celsius --mem_as_value --enable_ca
 alias clock='command tty-clock -bc -C7'
 alias fullclock='command tty-clock -sBbc -C7'
 alias screensaverclock='command tty-clock -Sra 100000000 -d 0'
+
+# -------------------------------- #
+# sudoize
+# -------------------------------- #
+# add sudo prefix to commands
+
+alias apt='sudo apt'
+alias snap='sudo snap'
+alias chmod='sudo chmod'
+alias chown='sudo chown'
+alias reboot='sudo reboot'
+alias poweroff='sudo poweroff'
+alias systemctl='sudo systemctl'
