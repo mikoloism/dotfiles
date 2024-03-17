@@ -1,4 +1,4 @@
-theme "default"
+theme "rose-pine"
 default_layout "compact"
 default_mode "locked"
 mouse_mode true
